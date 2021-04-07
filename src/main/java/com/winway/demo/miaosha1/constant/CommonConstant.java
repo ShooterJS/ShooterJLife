@@ -3,7 +3,7 @@ package com.winway.demo.miaosha1.constant;
 /**
  * 常量
  * 
- * @category @author xiangyong.ding@weimob.com
+ * @category @author ShooterJ
  * @since 2017年3月16日 下午12:02:44
  */
 public class CommonConstant
@@ -46,7 +46,7 @@ public class CommonConstant
 	 * 限流倍数
 	 * 
 	 * @category 限流倍数
-	 * @author xiangyong.ding@weimob.com
+	 * @author ShooterJ
 	 * @since 2017年3月16日 下午2:08:54
 	 */
 	public interface CurrentLimitMultiple

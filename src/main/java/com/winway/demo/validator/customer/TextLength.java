@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 /**
  * 定义在Model或Dto对象中，UTF-8编码的字符串字段长度的上限和下限，和TextLengthValidator对象配合完成数据验证。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 @Target({ElementType.FIELD})

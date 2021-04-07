@@ -10,7 +10,7 @@ public class RemoteServiceCall {
     public List<Map<String,Object>> queryRemote(List<OrderService.FurureRequest> requests){
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (Exception e) {
             e.printStackTrace();
         }

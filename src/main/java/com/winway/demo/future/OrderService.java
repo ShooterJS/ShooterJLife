@@ -1,6 +1,7 @@
 package com.winway.demo.future;
 
 import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,9 +16,9 @@ import java.util.concurrent.*;
  * 1.订单服务请求(orderCode,SerialNo+future组装成对象)放入入队列BlockingQueue ,利用CompeleteFuture的get方法等待结果
  * 2.定时器每10秒拉取队列中的请求数据ScheduleThreadPool，批量发送给远程调用（不用频繁建立连接，关闭连接）
  * 3.远程接受到请求，处理后返回给调用方，循环比较serierNo,如果相等则将CompeleteFuture.compelte表示已接收到返回，
- * 4.这时候调用方
  */
 @Component
+@Slf4j
 public class OrderService {
 
     @Autowired
@@ -53,12 +54,13 @@ public class OrderService {
 
         queue.add(request);
         Map<String, Object> map = listenFuture.get();
+        System.out.println("调用接口后返回:"+ JSON.toJSONString(map));
         return map;
     }
 
 
     /**
-     * 定时器没10ms去队列中去数据
+     * 定时器没10ms去队列中取数据
      */
     @PostConstruct
     public void init() {

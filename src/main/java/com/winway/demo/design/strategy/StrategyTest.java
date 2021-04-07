@@ -1,9 +1,6 @@
 package com.winway.demo.design.strategy;
 
 import com.winway.demo.DemoApplication;
-import com.winway.demo.future.CountDownLatchTest;
-import com.winway.demo.util.WWObjectUtil;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +14,6 @@ public class StrategyTest {
 
     @Autowired
     ApplicationContext applicationContext;
-    @Autowired
-    CountDownLatchTest countDownLatchTest;
 
     @Test
     public void testStrateagy() {

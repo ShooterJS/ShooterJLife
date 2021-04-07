@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 聚合计算的常量类型对象。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public final class AggregationType {

@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 恶意用户检测拦截器
  * 
- * @category @author xiangyong.ding@weimob.com
+ * @category @author ShooterJ
  * @since 2017年3月26日 下午3:41:21
  */
 @Component
@@ -104,7 +104,7 @@ public class UserInterceptor /*implements HandlerInterceptor*/
 	/**
 	 * 用户访问记录
 	 * 
-	 * @category @author xiangyong.ding@weimob.com
+	 * @category @author ShooterJ
 	 * @since 2017年3月30日 下午4:20:47
 	 */
 	public static class UserRequestRecord

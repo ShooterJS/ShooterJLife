@@ -2,7 +2,7 @@ package com.winway.demo.miaosha1.constant;
 
 /**
  * 
- * @category @author xiangyong.ding@weimob.com
+ * @category @author ShooterJ
  * @since 2017年2月3日 下午9:20:33
  */
 public interface MessageType

@@ -4,7 +4,7 @@ package com.winway.demo.model.bean;
  * 为了解决反射过程中,需要传递null参数,但是会丢失参数类型而设立的包装类
  *
  * @param <T> Null值对应的类型
- * @author Lillls
+ * @author ShooterJ
  * @since 5.5.0
  */
 public class NullWrapperBean<T> {

@@ -19,7 +19,7 @@ import java.util.concurrent.TimeoutException;
  * 业务层的异常处理类，这里只是给出最通用的Exception的捕捉，今后可以根据业务需要，
  * 用不同的函数，处理不同类型的异常。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 @Slf4j

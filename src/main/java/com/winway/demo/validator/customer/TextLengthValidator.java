@@ -8,7 +8,7 @@ import javax.validation.ConstraintValidatorContext;
 /**
  * 数据字段自定义验证，用于验证Model中UTF-8编码的字符串字段的最大长度和最小长度。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public class TextLengthValidator implements ConstraintValidator<TextLength, String> {

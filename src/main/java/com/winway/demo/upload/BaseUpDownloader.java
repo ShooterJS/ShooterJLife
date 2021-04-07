@@ -18,7 +18,7 @@ import java.util.List;
  * 上传或下载文件抽象父类。
  * 包含存储本地文件的功能，以及上传和下载所需的通用方法。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 @Slf4j

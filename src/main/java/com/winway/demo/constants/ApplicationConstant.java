@@ -3,7 +3,7 @@ package com.winway.demo.constants;
 /**
  * 应用程序的常量声明对象。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public final class ApplicationConstant {

@@ -35,9 +35,4 @@ public class TestController {
         return 4;
     }
 
-/*
-    @RequestMapping("/test-local-config")
-    public Map testLocalConfig() {
-        return ImmutableMap.builder().put("nickname", nickname).put("age", age).build();
-    }*/
 }

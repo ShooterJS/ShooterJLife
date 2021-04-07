@@ -3,7 +3,7 @@ package com.winway.demo.upload;
 /**
  * 上传数据存储介质类型枚举。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public enum UploadStoreTypeEnum {

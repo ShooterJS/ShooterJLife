@@ -3,7 +3,7 @@ package com.winway.demo.exception;
 /**
  * 没有数据被修改的自定义异常。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-08-08
  */
 public class NoDataAffectException extends RuntimeException {

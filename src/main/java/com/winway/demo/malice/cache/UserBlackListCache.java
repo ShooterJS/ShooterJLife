@@ -9,7 +9,7 @@ import  com.winway.demo.miaosha1.constant.*;
  * 黑名单缓存
  * 
  * @category 黑名单缓存
- * @author xiangyong.ding@weimob.com
+ * @author ShooterJ
  * @since 2017年4月18日 下午10:06:21
  */
 @Component
@@ -22,7 +22,7 @@ public class UserBlackListCache
 	 * 增加进入黑名单
 	 * 
 	 * @category 增加进入黑名单
-	 * @author xiangyong.ding@weimob.com
+	 * @author ShooterJ
 	 * @since 2017年4月18日 下午10:08:42
 	 * @param mobile
 	 */
@@ -35,7 +35,7 @@ public class UserBlackListCache
 	 * 是否在黑名单中
 	 * 
 	 * @category 是否在黑名单中
-	 * @author xiangyong.ding@weimob.com
+	 * @author ShooterJ
 	 * @since 2017年4月18日 下午10:10:51
 	 * @param mobile
 	 * @return

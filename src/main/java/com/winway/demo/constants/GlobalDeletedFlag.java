@@ -3,7 +3,7 @@ package com.winway.demo.constants;
 /**
  * 数据记录逻辑删除标记常量。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public final class GlobalDeletedFlag {

@@ -3,7 +3,7 @@ package com.winway.demo.exception;
 /**
  * 数据验证失败的自定义异常。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-08-08
  */
 public class DataValidationException extends RuntimeException {

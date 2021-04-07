@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 无效的实体对象的自定义异常。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-08-08
  */
 @Data

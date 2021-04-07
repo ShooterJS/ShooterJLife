@@ -3,7 +3,7 @@ package com.winway.demo.exception;
 /**
  * 关联远程服务数据失败的自定义异常。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-08-08
  */
 public class RemoteDataBuildException extends RuntimeException {

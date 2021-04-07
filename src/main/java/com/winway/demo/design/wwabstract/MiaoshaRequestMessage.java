@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 秒杀请求消息
  * 
  * @category 秒杀请求消息
- * @author xiangyong.ding@weimob.com
+ * @author ShooterJ
  * @since 2017年4月7日 下午5:34:13
  */
 public class MiaoshaRequestMessage implements Serializable

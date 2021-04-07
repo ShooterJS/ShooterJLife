@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 获取Servlet HttpRequest和HttpResponse的工具类。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public class ContextUtil {

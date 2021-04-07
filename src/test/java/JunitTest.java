@@ -1,7 +1,6 @@
 import com.winway.demo.DemoApplication;
 import com.winway.demo.design.strategy.AbstractHandler;
 import com.winway.demo.design.strategy.OneHandler;
-import com.winway.demo.future.CountDownLatchTest;
 import com.winway.demo.util.WWObjectUtil;
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,8 +16,6 @@ public class JunitTest {
 
     @Autowired
     ApplicationContext applicationContext;
-    @Autowired
-    CountDownLatchTest countDownLatchTest;
 
     @Test
     public void testStrateagy() {
@@ -31,11 +28,6 @@ public class JunitTest {
        /* AbstractHandler two = HandlerFactory.getHandlerByName("two");
         two.drive();
         two.eat();*/
-    }
-
-    @Test
-    public void testCountDownLatch() throws Exception {
-        countDownLatchTest.test();
     }
 
 

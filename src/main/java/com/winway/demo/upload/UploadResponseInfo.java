@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 数据上传操作的应答信息对象。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 @Data

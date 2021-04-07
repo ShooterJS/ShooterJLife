@@ -3,7 +3,7 @@ package com.winway.demo.constants;
 /**
  * 返回应答中的错误代码和错误信息。
  *
- * @author Jerry
+ * @author ShooterJ
  * @date 2020-09-24
  */
 public enum ErrorCodeEnum {
