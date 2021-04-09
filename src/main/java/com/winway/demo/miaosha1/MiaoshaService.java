@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
  *
  * 4. 秒杀请求加入到消息队列，rpush
  *
- * 5. 线程异步循环处理，利用Bpop命令取出消息队列中的消息，进行处理
+ * 5. 线程异步循环处理，利用Blpop命令取出消息队列中的消息，进行处理
  *
  * 6.消息处理：
  *      6.1：检测为黑名单用户，拒绝抢购

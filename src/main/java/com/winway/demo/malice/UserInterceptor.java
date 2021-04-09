@@ -16,7 +16,6 @@ import java.util.List;
  * 恶意用户检测拦截器
  * 
  * @category @author ShooterJ
- * @since 2017年3月26日 下午3:41:21
  */
 @Component
 public class UserInterceptor /*implements HandlerInterceptor*/

@@ -1075,4 +1075,75 @@ public class RedisUtil implements InitializingBean {
         }
     }
 
+    /**
+     * 获取数据
+     *
+     * @param key
+     * @return
+     */
+    public <T> T blpop(String key, int waitSeconds, Class<T> clazz)
+    {
+        Jedis jedis = null;
+
+        try
+        {
+            jedis = getConnent();
+            List<byte[]> values = jedis.blpop(waitSeconds, key.getBytes());
+
+            if (values != null && values.size() > 0)
+            {
+                byte[] value = values.get(1);
+                return ConvertUtil.unserialize(value, clazz);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (Exception e)
+        {
+            logger.error("redis get data failed!", e);
+            return null;
+        }
+        finally
+        {
+            close(jedis);
+        }
+    }
+
+    /**
+     * 存储REDIS队列 顺序存储,可设置过期时间，过期时间以秒为单位
+     *
+     * @param key reids键名
+     * @param value 键值
+     * @param second 过期时间(秒)
+     */
+    public <T> Long rpush(String key, T value, int second)
+    {
+        Jedis jedis = null;
+        Long ret = null;
+        try
+        {
+            jedis = getConnent();
+            byte[] bytes = ConvertUtil.serialize(value);
+            ret = jedis.rpush(key.getBytes(), bytes);
+
+            if (second > 0)
+            {
+                jedis.expire(key, second);
+            }
+
+        }
+        catch (Exception e)
+        {
+            logger.error("redis lpush data failed , key = " + key, e);
+        }
+        finally
+        {
+            close(jedis);
+        }
+
+        return ret;
+    }
+
 }

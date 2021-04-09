@@ -17,10 +17,11 @@ public class ThreadUtil {
      * @since 5.4.1
      */
     public static ExecutorService newExecutor(int corePoolSize, int maximumPoolSize, int maximumQueueSize) {
-        return ThreadPoolBuilder.create()
+        ThreadPoolExecutor executor = ThreadPoolBuilder.create()
                 .setCorePoolSize(corePoolSize)
                 .setMaxPoolSize(maximumPoolSize)
                 .setWorkQueue(new LinkedBlockingQueue<>(maximumQueueSize))
                 .build();
+        return executor;
     }
 }
