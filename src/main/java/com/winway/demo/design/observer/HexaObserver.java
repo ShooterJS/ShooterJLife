@@ -1,10 +1,8 @@
 package com.winway.demo.design.observer;
 
-import javax.security.auth.Subject;
 
 public class HexaObserver extends WWObserver {
 
-    WWSubject subject;
 
     public HexaObserver(WWSubject subject) {
         this.subject = subject;
@@ -15,8 +13,12 @@ public class HexaObserver extends WWObserver {
 
     @Override
     public void update() {
+        System.out.println("HexaObserver 的主题对象是"+subject.toString());
         System.out.println("Hex String: "
                 + Integer.toHexString(subject.getState()).toUpperCase());
     }
 
+    public static void main(String[] args) {
+        System.out.println(Integer.toHexString(10).toUpperCase());
+    }
 }

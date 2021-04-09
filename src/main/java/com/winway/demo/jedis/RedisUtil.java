@@ -30,18 +30,21 @@ public class RedisUtil implements InitializingBean {
      * 最大连接数，如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个JEDIS实例，则此时pool的状态为exhausted(耗尽
      * )。
      */
+    @Value("${jedis.maxTotal}")
     private Integer maxTotal = 10000;
 
     /**
      * 控制一个pool最多有多少个状态为idle(空闲的)的JEDIS实例
      */
+    @Value("${jedis.maxIdle}")
     private Integer maxIdle = 5;
-
+    @Value("${jedis.minIdle}")
     private Integer minIdle = 1;
 
     /**
      * 最大的等待时间，如果超过等待时间，则直接抛出JedisConnectionException；
      */
+    @Value("${jedis.maxWaitTime}")
     private Integer holed = 2000;
 
     /**
@@ -59,6 +62,7 @@ public class RedisUtil implements InitializingBean {
     /**
      * redis连接超时时间
      */
+    @Value("${jedis.connectTimeout}")
     private Integer timeout = 30;
 
     /**

@@ -24,3 +24,9 @@ jedis:
   password:
   port: 6379
   databasesIndex: 1
+  maxTotal: 10000
+  maxIdle: 5
+  minIdle: 1
+  maxWaitTime: 2000
+  connectTimeout: 30
+

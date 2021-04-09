@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 主题
- * 只要主题一变所有的观察者的数据都得跟着变化
+ * 主题：观察者 = 1：N
  * 1.将所有的观察者注册进来，提供注册方法
  * 2.主题的业务方法
  * 3.遍历所有的观察者，调用观察者的update方法
@@ -24,8 +24,13 @@ public class WWSubject {
         observerList.add(observer);
     }
 
-    //业务方法
     public void setState(int state){
+        this.state = state;
+        notifyAllObservers();
+    }
+
+    //业务方法
+    public void notifyAllObservers(){
         observerList.stream().forEach(observer -> {
             observer.update();
         });

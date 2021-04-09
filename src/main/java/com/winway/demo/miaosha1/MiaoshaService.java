@@ -4,7 +4,9 @@ package com.winway.demo.miaosha1;
 import org.springframework.stereotype.Component;
 
 /**
- * 主题分为秒杀和下单减库存两个主流程
+ * 分为秒杀和下单减库存两个主流程
+ * 恶意请求过滤-->限流-->redis消息队列执行占位操作，获得下单token-->用户传入token下单 如下为抢购流程
+ * 所有请求放入redis列表，阻塞获取列表中的请求，逐个处理保证线程安全
  *
  * 准备工作，定时器将数据库中的商品库存预热到redis
  * 根据goodsid获取随机名称(这样确保前端用户不能提前知道秒杀链接，降低被刷风险)

@@ -17,15 +17,12 @@ public class StrategyTest {
 
     @Test
     public void testStrateagy() {
-//        AbstractHandler one = HandlerFactory.getHandlerByName("one");
-        AbstractHandler one = applicationContext.getBean(OneHandler.class);
+        AbstractHandler one = HandlerFactory.getHandlerByName("one");
+//        AbstractHandler one = applicationContext.getBean(OneHandler.class);
         one.drive();
         one.eat();
 
 
-       /* AbstractHandler two = HandlerFactory.getHandlerByName("two");
-        two.drive();
-        two.eat();*/
     }
 
 

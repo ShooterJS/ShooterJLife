@@ -2,12 +2,18 @@ package com.winway.demo.design.observer;
 
 /**
  * 观察者
- * 首先观察主题，得有主题注入
  */
 public abstract class WWObserver {
 
-     WWSubject wwSubject;
-     public abstract void update();
+    /**
+     * 观察的主题对象
+     */
+    WWSubject subject;
+
+    /**
+     * 主题变化，触发观察者更新抽象方法
+     */
+    public abstract void update();
 
 
 }
