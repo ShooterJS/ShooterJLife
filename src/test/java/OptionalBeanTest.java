@@ -1,15 +1,12 @@
-import com.winway.demo.DemoApplication;
+import com.alibaba.fastjson.JSON;
 import com.winway.demo.optional.WWCustomerOptionalBean;
 import lombok.Data;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = DemoApplication.class)
 public class OptionalBeanTest {
 
     @Test
@@ -39,6 +36,22 @@ public class OptionalBeanTest {
             Assert.assertEquals(e.getMessage(), "空指针了");
         }
     }
+
+    @Test
+    public void testFunc() {
+        int i = 3;
+        WWCustomerOptionalBean.validateAndApplyFunction(i>2,this::out1,this::out2,"大红灯笼","搞搞搞");
+    }
+
+    private Object out1(Object[] objects) {
+        System.out.println("out1:"+JSON.toJSON(objects));
+        return 1;
+    }
+    private Object out2(Object[] objects) {
+        System.out.println("out2:"+JSON.toJSON(objects));
+        return 2;
+    }
+
 
     @Data
     class User {

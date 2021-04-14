@@ -2,6 +2,7 @@ package com.winway.demo.optional;
 
 
 import com.winway.demo.util.WWObjectUtil;
+
 import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -51,6 +52,8 @@ public class WWCustomerOptionalBean<T> {
     }
 
 
+
+
     public <R> WWCustomerOptionalBean<R> getBean(Function<? super T, ? extends R> fn) {
         return value == null ? empty() : WWCustomerOptionalBean.ofNullable(fn.apply(value));
     }
@@ -84,5 +87,13 @@ public class WWCustomerOptionalBean<T> {
         return value == null ? other.get() : value;
     }
 
+
+    public static  void validateAndApplyFunction(boolean flag, Function<Object[], Object> trueFunc, Function<Object[], Object> falseFunc, Object...args){
+        if(flag){
+            trueFunc.apply(args);
+        }else{
+            falseFunc.apply(args);
+        }
+    }
 
 }
