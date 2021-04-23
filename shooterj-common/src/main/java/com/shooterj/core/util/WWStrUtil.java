@@ -182,6 +182,14 @@ public class WWStrUtil {
         }
         return new String(data, charset);
     }
-
+    public static boolean equals(CharSequence str1, CharSequence str2, boolean ignoreCase) {
+        if (null == str1) {
+            return str2 == null;
+        } else if (null == str2) {
+            return false;
+        } else {
+            return ignoreCase ? str1.toString().equalsIgnoreCase(str2.toString()) : str1.toString().contentEquals(str2);
+        }
+    }
 
 }

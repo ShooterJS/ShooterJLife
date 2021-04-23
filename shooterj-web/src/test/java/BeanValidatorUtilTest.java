@@ -1,6 +1,6 @@
 import com.shooterj.core.model.User;
-import com.shooterj.core.validator.bean.BeanValidationResult;
-import com.shooterj.core.validator.bean.WWValidationUtil;
+import com.shooterj.core.validator.beanvalid.BeanValidationResult;
+import com.shooterj.core.validator.beanvalid.WWValidationUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

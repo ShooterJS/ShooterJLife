@@ -1,4 +1,4 @@
-package com.shooterj.core.validator.bean;
+package com.shooterj.core.validator.beanvalid;
 
 
 import javax.validation.ConstraintViolation;

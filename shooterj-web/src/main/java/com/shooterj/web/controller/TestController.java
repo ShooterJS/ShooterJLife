@@ -2,24 +2,23 @@ package com.shooterj.web.controller;
 
 
 import com.google.common.collect.Lists;
-import com.shooterj.core.model.User;
 import com.shooterj.core.apiresponse.APIException;
+import com.shooterj.core.constants.ErrorCodeEnum;
+import com.shooterj.core.model.ResponseResult;
+import com.shooterj.core.model.User;
+import com.shooterj.core.model.UserDto;
+import com.shooterj.core.util.MyCommonUtil;
+import com.shooterj.core.util.MyModelUtil;
+import com.shooterj.core.validator.group.UpdateGroup;
 import com.shooterj.core.version.APIVersion;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.ArrayList;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.groups.Default;
 import java.util.List;
 
 @RestController
 @RequestMapping(value = "/")
 public class TestController {
-   /* @Value("${member.nickname}")
-    private  String nickname;
-
-    @Value("${member.age}")
-    private  Integer age;*/
 
     @GetMapping(value = "testResponse")
     public List<String> testResponse(Integer type) {
@@ -37,11 +36,18 @@ public class TestController {
         return 4;
     }
 
-    @GetMapping(value = "testFilter")
-    public List<User> testFilter(@RequestBody User user) {
-        ArrayList<User> list = Lists.newArrayList();
-        list.add(user);
-        return list;
+
+
+    @PostMapping(value = "updateUser")
+    public ResponseResult<Void> validateUpdate(@RequestBody UserDto userDto) {
+        String errorMessage = MyCommonUtil.getModelValidationError(userDto, Default.class, UpdateGroup.class);
+        if(errorMessage!=null){
+            return ResponseResult.error(ErrorCodeEnum.DATA_VALIDATED_FAILED, errorMessage);
+        }
+        MyModelUtil.copyTo(userDto, User.class);
+        return ResponseResult.success();
     }
+
+
 
 }
