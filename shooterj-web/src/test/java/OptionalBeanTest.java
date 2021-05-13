@@ -5,9 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = WebApplication.class)
-public class OptionalBeanTest {
+public class OptionalBeanTest extends BaseTestCase{
 
     @Test
     public void testCustomerOptional() {

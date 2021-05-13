@@ -1,7 +1,5 @@
 import com.shooterj.core.future.OrderService;
-import com.shooterj.core.repeat.service.RepeatService;
 import com.shooterj.web.WebApplication;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +21,8 @@ public class CountDownLatchTest {
 
     @Autowired
     OrderService orderService;
-    @Autowired
-    RepeatService repeatService;
+//    @Autowired
+//    RepeatService repeatService;
 
     private CountDownLatch cdl = new CountDownLatch(1);
 
@@ -57,7 +55,7 @@ public class CountDownLatchTest {
     }
 
 
-    @Test
+   /* @Test
     @Ignore
     public void testRepeatAop() throws Exception{
         for (int i = 0; i < MAX_THREAD; i++) {
@@ -76,6 +74,6 @@ public class CountDownLatchTest {
         //执行调用
         cdl.countDown();
 
-    }
+    }*/
 
 }

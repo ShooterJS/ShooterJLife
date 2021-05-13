@@ -10,9 +10,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>shooterj-log</module>
-        <module>shooterj-common</module>
+        <module>shooterj-base</module>
         <module>shooterj-web</module>
         <module>shooterj-design-patterns</module>
+        <module>shooterj-cache</module>
+        <module>shooterj-seckill</module>
+        <module>shooterj-job</module>
     </modules>
 
     <properties>

@@ -19,13 +19,18 @@
     <dependencies>
         <dependency>
             <groupId>com.winway</groupId>
-            <artifactId>shooterj-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <artifactId>shooterj-base</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.winway</groupId>
             <artifactId>shooterj-log</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.winway</groupId>
+            <artifactId>shooterj-cache</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
     <build>
