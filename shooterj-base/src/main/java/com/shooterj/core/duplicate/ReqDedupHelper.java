@@ -9,10 +9,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.TreeMap;
 
+/**
+ * 处理重复请求
+ *@see ReqDedupTest#test
+ */
 @Slf4j
 public class ReqDedupHelper {
+
     /**
-     *
      * @param reqJSON 请求的参数，这里通常是JSON
      * @param excludeKeys 请求参数里面要去除哪些字段再求摘要
      * @return 去除参数的MD5摘要
@@ -47,4 +51,6 @@ public class ReqDedupHelper {
         }
         return res;
     }
+
+
 }
