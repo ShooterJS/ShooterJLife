@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: shooterj-demo
+  profiles:
+    active: dev

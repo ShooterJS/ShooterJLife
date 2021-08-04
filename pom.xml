@@ -16,6 +16,8 @@
         <module>shooterj-cache</module>
         <module>shooterj-seckill</module>
         <module>shooterj-job</module>
+        <module>mci-prevent-repeat</module>
+        <module>shooterj-demo</module>
     </modules>
 
     <properties>

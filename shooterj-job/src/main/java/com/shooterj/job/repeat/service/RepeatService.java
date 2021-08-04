@@ -1,7 +1,7 @@
 package com.shooterj.job.repeat.service;
 
-import com.shooterj.cache.RedisService;
-import com.shooterj.job.repeat.job.RepeatJob;
+import com.shooterj.cache.impl.RedisCache;
+import com.shooterj.job.repeat.aop.RepeatJob;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 public class RepeatService {
 
     @Autowired
-    RedisService redisService;
+    RedisCache redisCache;
 
     @RepeatJob(expire = 20,uniqueAppName = "EIP-TESTJOB")
     public void testAop(){
 
         String key = "testaa";
         try {
-            boolean success = redisService.setnx(key, "", 30);
+            boolean success = redisCache.setIfAbsent(key,  "30");
             if (success) {
                 System.out.println("成功加锁，执行请求。。。。。。。。。。。。");
             } else {
@@ -27,7 +27,7 @@ public class RepeatService {
             e.printStackTrace();
         } finally {
             //执行完后删除key，等待下一次定时器任务的执行
-            redisService.delByKey(key);
+            redisCache.del(key);
 
         }
     }

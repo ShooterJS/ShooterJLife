@@ -4,7 +4,6 @@ import com.shooterj.core.exception.ConvertException;
 
 import java.io.Serializable;
 import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
 import java.util.Map;
 
 /**
@@ -124,17 +123,6 @@ public class ConverterRegistry implements Serializable {
         return null;
     }
 
-    /**
-     * 是否未知类型<br>
-     * type为null或者{@link TypeVariable} 都视为未知类型
-     *
-     * @param type Type类型
-     * @return 是否未知类型
-     * @since 4.5.2
-     */
-    public static boolean isUnknown(Type type) {
-        return null == type || type instanceof TypeVariable;
-    }
 
     /**
      * 获得转换器<br>

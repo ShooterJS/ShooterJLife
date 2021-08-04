@@ -9,11 +9,15 @@ import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.PermissionDeniedDataAccessException;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -138,4 +142,16 @@ public class MyExceptionHandler {
 		}
 		return ResponseResult.error(ErrorCodeEnum.REDIS_CACHE_ACCESS_STATE_ERROR);
 	}
+
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseResult<Void> handlShooterJlidationExceptions(MethodArgumentNotValidException ex) {
+		Map<String, String> errors = new HashMap<>();
+		ex.getBindingResult().getAllErrors().forEach((error) -> {
+			String fieldName = ((FieldError) error).getField();
+			String errorMessage = error.getDefaultMessage();
+			errors.put(fieldName, errorMessage);
+		});
+		return ResponseResult.error(ErrorCodeEnum.INVALID_ARGUMENT_FORMAT,errors.toString());
+	}
+
 }

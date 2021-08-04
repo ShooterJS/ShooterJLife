@@ -2,11 +2,11 @@ package com.shooterj.web.controller;
 
 
 import com.google.common.collect.Lists;
+import com.shooterj.core.model.UserDto;
 import com.shooterj.core.apiresponse.APIException;
 import com.shooterj.core.constants.ErrorCodeEnum;
 import com.shooterj.core.model.ResponseResult;
 import com.shooterj.core.model.User;
-import com.shooterj.core.model.UserDto;
 import com.shooterj.core.util.MyCommonUtil;
 import com.shooterj.core.util.MyModelUtil;
 import com.shooterj.core.validator.group.UpdateGroup;

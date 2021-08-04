@@ -1,4 +1,4 @@
-package com.shooterj.core.util;
+package com.shooterj.core.builder;
 
 import java.util.ArrayList;
 import java.util.List;

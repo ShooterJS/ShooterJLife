@@ -1,6 +1,6 @@
 package com.shooterj.job.repeat.test;
 
-import com.shooterj.job.repeat.job.RepeatJob;
+import com.shooterj.job.repeat.aop.RepeatJob;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 

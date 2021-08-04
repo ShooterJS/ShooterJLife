@@ -1,0 +1,72 @@
+server:
+  port: 8080
+
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://172.18.1.141:3306/isales?serverTimezone=UTC&useSSL=false&&characterEncoding=UTF-8&allowMultiQueries=true&queryTimeout=2400
+      username: isalesuser
+      password: 'Isales_2019#wy'
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      name: application-web
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      maxOpenPreparedStatements: 20
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      filters: stat,wall
+      useGlobalDataSourceStat: true
+  #redis 配置
+  redis:
+    database: 1
+    host: 172.18.1.141
+    lettuce:
+      pool:
+        max-active: 8   #最大连接数据库连接数,设 -1 为没有限制
+        max-idle: 8     #最大等待连接中的数量,设 0 为没有限制
+        max-wait: -1ms  #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+        min-idle: 0     #最小等待连接中的数量,设 0 为没有限制
+      shutdown-timeout: 100ms
+    password: ''
+    port: 6379
+
+member.nickname: "悟空聊架构"
+member.age: 18
+
+#检测恶意IP，多少秒被出现多少次请求
+ip_black_times: 10
+ip_black_seconds: 10
+#检测恶意IP，多少秒被出现多少次请求
+user_black_times: 10
+user_black_seconds: 10
+
+jedis:
+  url: 172.18.1.141
+  password:
+  port: 6379
+  databasesIndex: 1
+  maxTotal: 10000
+  maxIdle: 5
+  minIdle: 1
+  maxWaitTime: 2000
+  connectTimeout: 30
+
+
+# machine
+system:
+  id:
+    machineName: eden
+    idBase: 1000
+    increaseBound: 10000
