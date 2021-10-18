@@ -33,6 +33,12 @@ spring:
       filters: stat,wall
       useGlobalDataSourceStat: true
 
+logging:
+  level:
+    com:
+      shooterj:
+        mapper: debug
+
 
 member.nickname: "悟空聊架构"
 member.age: 18

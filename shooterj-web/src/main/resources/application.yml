@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://172.18.1.141:3306/isales?serverTimezone=UTC&useSSL=false&&characterEncoding=UTF-8&allowMultiQueries=true&queryTimeout=2400
+    url: jdbc:mysql://127.0.0.1:3306/isales?serverTimezone=UTC&useSSL=false&&characterEncoding=UTF-8&allowMultiQueries=true&queryTimeout=2400
     username: isalesuser
-    password: 'Isales_2019#wy'
+    password: ''
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
@@ -23,7 +23,7 @@ user_black_times: 10
 user_black_seconds: 10
 
 jedis:
-  url: 172.18.1.141
+  url: 127.0.0.1
   password:
   port: 6379
   databasesIndex: 1

@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @Configuration
 @MapperScan(basePackages={"com.shooterj.**.mapper"})
-@ComponentScan({"com.shooterj.*"})
+@ComponentScan({"com.shooterj.**"})
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

@@ -15,9 +15,10 @@
         <module>shooterj-design-patterns</module>
         <module>shooterj-cache</module>
         <module>shooterj-seckill</module>
-        <module>shooterj-job</module>
         <module>mci-prevent-repeat</module>
         <module>shooterj-demo</module>
+        <module>shooterj-boot-starter</module>
+        <module>shooterj-jasypt</module>
     </modules>
 
     <properties>
@@ -26,6 +27,7 @@
         <java.version>1.8</java.version>
         <druid.version>1.1.22</druid.version>
         <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <redisson.version>3.13.6</redisson.version>
     </properties>
 
     <parent>

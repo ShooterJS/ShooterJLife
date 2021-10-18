@@ -21,7 +21,7 @@
             <artifactId>shooterj-base</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+       <dependency>
             <groupId>com.winway</groupId>
             <artifactId>shooterj-log</artifactId>
             <version>${project.version}</version>

@@ -42,6 +42,21 @@ spring:
     password: ''
     port: 6379
 
+logging:
+  level:
+    com:
+      shooterj:
+        mapper: debug
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
 member.nickname: "悟空聊架构"
 member.age: 18
 

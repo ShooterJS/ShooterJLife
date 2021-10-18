@@ -1,5 +1,5 @@
 jedis:
-  url: 172.18.1.141
+  url: 127.0.0.1
   password:
   port: 6379
   databasesIndex: 1
