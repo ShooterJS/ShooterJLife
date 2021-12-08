@@ -19,6 +19,16 @@
         <module>shooterj-demo</module>
         <module>shooterj-boot-starter</module>
         <module>shooterj-jasypt</module>
+        <module>shooterj-queryfilter</module>
+        <module>shooterj-security</module>
+        <module>shooterj-spring-ioc-annotation</module>
+        <module>shooterj-spring-ioc-annotation</module>
+        <module>shooterj-springmvc</module>
+        <module>shooterj-algorithm</module>
+        <module>shooterj-distributed</module>
+        <module>shooterj-mini-tomcat</module>
+        <module>shooterj-netty</module>
+
     </modules>
 
     <properties>

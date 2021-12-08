@@ -76,7 +76,7 @@ public class BeanFactory {
         for(File file: files) {
             if(file.isDirectory()) { // 子package
                 // 递归
-                doScan(scanPackage + "." + file.getName());  // com.lagou.demo.controller
+                doScan(scanPackage + "." + file.getName());  // com.My.demo.controller
             }else if(file.getName().endsWith(".class")) {
                 String className = scanPackage + "." + file.getName().replaceAll(".class", "");
                 classNames.add(className);
@@ -164,7 +164,7 @@ public class BeanFactory {
     private static void doAutoWired(){
         if(map.isEmpty()) {return;}
 
-        // 遍历ioc中所有对象，查看对象中的字段，是否有@LagouAutowired注解，如果有需要维护依赖注入关系
+        // 遍历ioc中所有对象，查看对象中的字段，是否有@MyAutowired注解，如果有需要维护依赖注入关系
         for(Map.Entry<String,Object> entry: map.entrySet()) {
             try {
                 doObjectDependancy(entry.getValue());
