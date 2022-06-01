@@ -28,7 +28,7 @@
         <module>shooterj-distributed</module>
         <module>shooterj-mini-tomcat</module>
         <module>shooterj-netty</module>
-
+        <module>shooterj-java-escape</module>
     </modules>
 
     <properties>
