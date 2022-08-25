@@ -1,6 +1,9 @@
 package com.shooterj.core.validator.beanvalid;
 
 
+import com.shooterj.core.exception.BizException;
+import com.shooterj.core.exception.DataValidationException;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -45,6 +48,24 @@ public class WWValidationUtil {
 	 */
 	public static <T> Set<ConstraintViolation<T>> validate(T bean, Class<?>... groups) {
 		return validator.validate(bean, groups);
+	}
+
+	/**
+	 * 校验对象
+	 * @param object        待校验对象
+	 * @param groups        待校验的组
+	 * @throws DataValidationException  校验不通过，则报DataValidationException异常
+	 */
+	public static void validateEntity(Object object, Class<?>... groups)
+			throws DataValidationException {
+		Set<ConstraintViolation<Object>> constraintViolations = validator.validate(object, groups);
+		if (!constraintViolations.isEmpty()) {
+			StringBuilder msg = new StringBuilder();
+			for(ConstraintViolation<Object> constraint:  constraintViolations){
+				msg.append(constraint.getMessage()).append("<br>");
+			}
+			throw new DataValidationException(msg.toString());
+		}
 	}
 
 	/**

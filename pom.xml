@@ -29,6 +29,8 @@
         <module>shooterj-mini-tomcat</module>
         <module>shooterj-netty</module>
         <module>shooterj-java-escape</module>
+        <module>shooterj-schedule-retry</module>
+        <module>shooterj-hadoop</module>
     </modules>
 
     <properties>
