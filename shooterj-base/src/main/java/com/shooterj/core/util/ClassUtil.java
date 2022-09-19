@@ -1,6 +1,7 @@
 package com.shooterj.core.util;
 
-import com.shooterj.core.validator.wwasert.WWAssert;
+
+import org.springframework.util.Assert;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -55,7 +56,7 @@ public class ClassUtil {
      * @return 是否为静态方法
      */
     public static boolean isStatic(Method method) {
-        WWAssert.notNull(method, "Method to provided is null.");
+        Assert.notNull(method, "Method to provided is null.");
         return Modifier.isStatic(method.getModifiers());
     }
 }

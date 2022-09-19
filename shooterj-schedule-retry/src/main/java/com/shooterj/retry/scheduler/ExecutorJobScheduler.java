@@ -1,18 +1,16 @@
 package com.shooterj.retry.scheduler;
 
-import com.smartrm.smartrmmonolith.infracore.api.CommonError;
-import com.smartrm.smartrmmonolith.infracore.exception.DomainException;
+import com.shooterj.retry.core.api.CommonError;
+import com.shooterj.retry.core.exception.DomainException;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.Date;
 import java.util.Map;
-
 import static org.quartz.DateBuilder.IntervalUnit;
 import static org.quartz.DateBuilder.futureDate;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
@@ -42,6 +40,12 @@ public class ExecutorJobScheduler {
     scheduler.shutdown();
   }
 
+  /**
+   * 纯定时器
+   * @param jobClass
+   * @param params
+   * @param delay
+   */
   public void schedule(Class<? extends ExecutorBase> jobClass, Map<String, Object> params,
       int delay) {
     Date date = new Date(System.currentTimeMillis() + delay);

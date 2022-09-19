@@ -4,9 +4,8 @@ import com.shooterj.core.cache.SimpleCache;
 import com.shooterj.core.convert.Convert;
 import com.shooterj.core.exception.UtilException;
 import com.shooterj.core.model.bean.NullWrapperBean;
-import com.shooterj.core.validator.wwasert.WWAssert;
 import org.apache.commons.lang3.StringUtils;
-
+import org.springframework.util.Assert;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
 
@@ -90,7 +89,7 @@ public class ReflectUtil {
      * @throws SecurityException 安全检查异常
      */
     public static Method[] getMethodsDirectly(Class<?> beanClass, boolean withSuperClassMethods) throws SecurityException {
-        WWAssert.notNull(beanClass);
+        Assert.notNull(beanClass);
 
         Method[] allMethods = null;
         Class<?> searchType = beanClass;
