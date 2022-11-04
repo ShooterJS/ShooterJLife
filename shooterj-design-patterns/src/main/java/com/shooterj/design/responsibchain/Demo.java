@@ -1,4 +1,4 @@
-package com.shooterj.design.chain;
+package com.shooterj.design.responsibchain;
 
 import java.io.BufferedReader;
 import java.io.IOException;
