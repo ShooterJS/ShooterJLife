@@ -29,13 +29,7 @@
         <module>shooterj-netty</module>
         <module>shooterj-java-escape</module>
         <module>shooterj-schedule-retry</module>
-        <module>shooterj-hadoop</module>
-        <module>shooterj-ddd</module>
-        <module>shooterj-ddd-common</module>
-        <module>shooterj-ddd-center</module>
-        <module>common-starter</module>
-        <module>common-starter</module>
-        <module>common-starter</module>
+        <module>shooterj-jpa-spring-boot-starter</module>
     </modules>
 
     <properties>
