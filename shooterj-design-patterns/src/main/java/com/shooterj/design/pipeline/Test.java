@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * 使用管道模式
  *
  * 1.埋点中台DDD领域驱动设计：页面停留，行为漏斗分析，活跃分析。
- * 2.用户组织架构信息曝光组件： 本地TimeCache + Redis + ThreadLocal线程副本 + WebMvc-Intercepter
+ * 2.用户组织架构信息曝光组件： 本地LRUCache + Redis + ThreadLocal线程副本 + WebMvc-Intercepter
  * 3.复杂流程代码通用组件：准备路由表，指定好Context和管道的映射，以及管道中处理器的顺序
  *      key为：Context类型，value为：执行器列表，Spring根据这份路由表，在启动时构建一个Map，业务方调用流程启动器开启流程
  */
